@@ -105,15 +105,15 @@ const App = () => {
                             >
                                 📅
                             </span>
+
                             <input
                                 type="datetime-local"
                                 id="task-date"
-                                className="hidden"
+                                className="absolute opacity-0 w-0 h-0" // <--- updated here
                                 value={newDueDate}
                                 onChange={(e) => setNewDueDate(e.target.value)}
                             />
                         </div>
-
 
                         {/* Add Button */}
                         <button
