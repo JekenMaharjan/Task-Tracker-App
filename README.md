@@ -44,7 +44,7 @@ Technologies used to build this project:
 ## 📸 Demo Preview
 
 <p align="center">
-  <img src="public/demo.png" alt="Task Tracker Preview" />
+  <img src="client/public/demo.png" alt="Task Tracker Preview" />
 </p>
 
 ---
