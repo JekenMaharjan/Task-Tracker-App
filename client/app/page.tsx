@@ -78,12 +78,12 @@ const App = () => {
                 <p>Focus! Master your day, one task at a time.</p>
             </div>
 
-            <div className="p-4 bg-white m-4 rounded shadow-md max-w-2xl mx-auto">
+            <div className="p-4 bg-white m-4 rounded shadow-md xs:w-md sm:w-2xl md:w-5xl lg:w-6xl mx-auto">
                 <p className="p-2 text-center text-3xl font-bold text-blue-500">Tasks</p>
-                <div className="w-full h-px bg-gray-300 my-2"></div>
+                <hr className="my-4 border-gray-300" />
 
                 {/* Legend */}
-                <div className="flex justify-between p-2 gap-x-4 text-sm">
+                <div className="flex justify-between p-2 gap-x-10 text-sm">
                     <div className="relative w-full">
                         {/* Task Input */}
                         <input
@@ -95,9 +95,20 @@ const App = () => {
                         />
 
                         {/* Date picker with calendar icon */}
-                        <div className="absolute top-1/2 right-25 -translate-y-1/2 flex items-center">
+                        <div className="absolute top-1/2 right-30 -translate-y-1/2">
+                            <span className="mr-5 text-gray-400 text-xs ">
+                                {newDueDate && !isNaN(new Date(newDueDate).getTime())
+                                    ? new Date(newDueDate).toLocaleString([], {
+                                        year: "numeric",
+                                        month: "short",
+                                        day: "numeric",
+                                        hour: "2-digit",
+                                        minute: "2-digit",
+                                    })
+                                    : ""}
+                            </span>
                             <span
-                                className="cursor-pointer text-gray-500"
+                                className="cursor-pointer text-xl text-gray-500"
                                 onClick={() => {
                                     const dateInput = document.getElementById("task-date") as HTMLInputElement;
                                     dateInput?.showPicker(); // open the date picker
@@ -109,7 +120,7 @@ const App = () => {
                             <input
                                 type="datetime-local"
                                 id="task-date"
-                                className="absolute opacity-0 w-0 h-0" // <--- updated here
+                                className="absolute opacity-0 w-0 h-10" // <--- updated here
                                 value={newDueDate}
                                 onChange={(e) => setNewDueDate(e.target.value)}
                             />
@@ -118,7 +129,7 @@ const App = () => {
                         {/* Add Button */}
                         <button
                             onClick={addTask}
-                            className="absolute top-1/2 right-2 -translate-y-1/2 bg-green-400 text-white px-4 py-2 rounded-full cursor-pointer  hover:bg-green-500"
+                            className="absolute top-1/2 right-0 pl-5 -translate-y-1/2 font-semibold text-[15px] bg-green-400 text-white px-6 py-4 rounded-l-none rounded-full cursor-pointer  hover:bg-green-500"
                         >
                             + Add
                         </button>
@@ -138,11 +149,11 @@ const App = () => {
 
                 {/* Filter tasks by status: */}
                 <div>
-                    <hr className="my-2 border-gray-300" />
+                    <hr className="my-4 border-gray-300" />
 
-                    <p className="text-sm text-gray-600">Filter tasks by status:</p>
+                    <p className="text-sm text-center text-gray-600 mb-2">Filter tasks by status:</p>
 
-                    <div className="flex gap-2 mb-4">
+                    <div className="flex justify-center gap-2 mb-4">
                         <button
                             onClick={() => setFilter("all")}
                             className={`px-4 cursor-pointer  py-2 rounded ${filter === "all" ? "bg-blue-400 text-white" : "bg-gray-200"
@@ -169,7 +180,7 @@ const App = () => {
 
                     </div>
 
-                    <hr className="my-2 border-gray-300" />
+                    <hr className="my-6 border-gray-300" />
 
                 </div>
 
