@@ -2,7 +2,7 @@
 
 A modern task management web application built with **React** and **Next.js**, designed to help you keep track of tasks efficiently with a clean and intuitive interface.
 
-🚀 **Live Demo:** https://task-tracker-kohl-eight.vercel.app
+🚀 **Live Demo:** [https://task-tracker-kohl-eight.vercel.app](https://task-tracker-jekode.vercel.app/)
 
 ---
 
