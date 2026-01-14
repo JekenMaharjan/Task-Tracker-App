@@ -13,6 +13,7 @@ This is a beginner‑friendly task tracker app built as part of hands‑on pract
 - View a list of tasks
 - Add new tasks
 - Delete tasks
+- Update tasks
 - Mark tasks as done or pending
 
 The project emphasizes simplicity, performance, and responsiveness.
@@ -26,7 +27,7 @@ Technologies used to build this project:
 - **Next.js** – React framework with SSR and routing
 - **React** – UI library
 - **TypeScript** – Type safety and improved developer experience
-- **CSS Modules** / Tailwind CSS (whichever you used) – Styling
+- **CSS Modules** / Tailwind CSS – Styling
 
 ---
 
@@ -35,7 +36,7 @@ Technologies used to build this project:
 ✔ Add new tasks  
 ✔ Mark tasks complete  
 ✔ Remove tasks  
-✔ Persistent state (if implemented)  
+✔ Persistent state
 ✔ Responsive UI
 
 ---
@@ -44,38 +45,35 @@ Technologies used to build this project:
 
 Follow these steps to run the project locally:
 
-1. Clone the repository
+1. **Clone the repository**
 
     ```bash
     git clone https://github.com/JekenMaharjan/Task-Tracker.git
     cd Task-Tracker
     ```
     
-2. Install dependencies
+2. **Install dependencies**
 
   ```bash
   cd client
   npm install
   ```
-
   or with yarn
-
   ```bash
   yarn install
   ```
 
-3. Run the development server
+3. **Run the development server**
 
   ```bash
   npm run dev
   ```
-
-  or with yarn
-  
+or with yarn
   ```bash
   yarn dev
   ```
-4. Open http://localhost:3000 in your browser to view the app.
+
+4. **Open http://localhost:3000 in your browser to view the app.**
 
 ---
 
@@ -83,26 +81,28 @@ Follow these steps to run the project locally:
 
 Contributions are always welcome! To contribute:
 
-1. Fork the repository.
-2. Create your feature branch:
+1. **Fork the repository.**
+
+
+2. **Create your feature branch:**
 
   ```bash
   git checkout -b feature/YourFeature
   ```
 
-3. Commit your changes:
+3. **Commit your changes:**
 
   ```bash
   git commit -m "Add new feature"
   ```
 
-4. Push to the branch:
+4. **Push to the branch:**
 
   ```bash
   git push origin feature/YourFeature
   ```
 
-5. Open a Pull Request.
+5. **Open a Pull Request.**
 
 ---
 
